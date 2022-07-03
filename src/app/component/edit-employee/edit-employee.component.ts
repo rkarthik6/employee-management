@@ -12,7 +12,11 @@ export class EditEmployeeComponent implements OnInit {
   employee: Employee
   editEmployee: FormGroup
   showSuccessMsg = false
+  submitted = false
   @Output() onUpdateEvent = new EventEmitter<boolean>();
+  get employeeFormControl() {
+    return this.editEmployee.controls;
+  }
   constructor(private fb: FormBuilder, private readonly commonService: CommonService) { }
 
   ngOnInit(): void {
@@ -39,6 +43,7 @@ export class EditEmployeeComponent implements OnInit {
   }
 
   onUpdate() {
+    this.submitted = true
     if (this.employee?.employee_name && this.editEmployee?.value?.employee_name) {
       const savedEmployees = this.commonService.getEmployeeData()
       const index = savedEmployees?.findIndex(item => item.id === this.employee.id)
@@ -47,6 +52,7 @@ export class EditEmployeeComponent implements OnInit {
       savedEmployees?.unshift(this.editEmployee.value)
       this.showSuccessMsg = true
       this.editEmployee.reset()
+      this.submitted = false
       setTimeout(()=> {
         this.showSuccessMsg = false
         this.onUpdateEvent.emit(true)

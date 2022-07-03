@@ -5,6 +5,10 @@
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Name</label>
         <input type="text" class="form-control" required formControlName="employee_name" id="exampleFormControlInput1" placeholder="enter name">
+        <span class="text-danger"
+          *ngIf="(employeeFormControl['employee_name']?.touched && submitted) && employeeFormControl['employee_name']?.errors">
+          Name is required
+      </span>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Designation</label>
@@ -12,7 +16,7 @@
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Salary</label>
-        <input type="text" class="form-control" formControlName="employee_salary" id="exampleFormControlInput1" placeholder="enter salary">
+        <input type="text" class="form-control" numberOnly formControlName="employee_salary" id="exampleFormControlInput1" placeholder="enter salary">
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Date of Birth</label>
