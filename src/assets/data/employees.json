@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "employee_name": "Tiger Nixon",
+        "employee_salary": 320800,
+        "dob": "2005/07/05",
+        "bio": "testing",
+        "employee_designation": "Officer"
+    },
+    {
+        "id": 2,
+        "employee_name": "Garrett Winters",
+        "employee_salary": 170750,
+        "dob": "2005/07/05",
+        "bio": "testingtestingtesting",
+        "employee_designation": "Officer"
+    },
+    {
+        "id": 3,
+        "employee_name": "Ashton Cox",
+        "employee_salary": 86000,
+        "dob": "2005/07/05",
+        "bio": "sadasdasd",
+        "employee_designation": "Officer"
+    },
+    {
+        "id": 4,
+        "employee_name": "Cedric Kelly",
+        "employee_salary": 433060,
+        "dob": "2005/07/05",
+        "bio": "sdsdasd",
+        "employee_designation": "Officer"
+    },
+    {
+        "id": 5,
+        "employee_name": "Airi Satou",
+        "employee_salary": 162700,
+        "dob": "2005/07/05",
+        "bio": "sadasd",
+        "employee_designation": "SQL Developer"
+    },
+    {
+        "id": 6,
+        "employee_name": "Sonya Frost",
+        "employee_salary": 103600,
+        "dob": "2015/07/05",
+        "bio": "sadasdasd",
+        "employee_designation": "Tester"
+    },
+    {
+        "id": 7,
+        "employee_name": "Sonya",
+        "employee_salary": 3600,
+        "dob": "2015/07/05",
+        "bio": "sadasdd",
+        "employee_designation": "TL"
+    },
+    {
+        "id": 8,
+        "employee_name": "Gloria Little",
+        "employee_salary": 237500,
+        "dob": "2005/03/05",
+        "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "employee_designation": "Officer"
+    },
+    {
+        "id": 9,
+        "employee_name": "Bradley Greer",
+        "employee_salary": 132000,
+        "dob": "2005/08/05",
+        "bio": "dsfgfdgf",
+        "employee_designation": "Officer"
+    },
+    {
+        "id": 10,
+        "employee_name": "Dai Rios",
+        "employee_salary": 217500,
+        "dob": "2005/07/05",
+        "bio": "asdasd",
+        "employee_designation": "Developer"
+    }
+]

@@ -1,0 +1,34 @@
+<h3>Add Employee</h3>
+<div class="col-md-12">
+  <form [formGroup]="addEmployee" class="col-6">
+    <p-message *ngIf="showSuccessMsg" severity="info" text="Successfully Added" styleClass="mr-2"></p-message>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Name</label>
+      <input type="text" class="form-control" required formControlName="employee_name" id="exampleFormControlInput1" placeholder="enter name">
+      <span class="text-danger"
+          *ngIf="(employeeFormControl['employee_name']?.touched && submitted) && employeeFormControl['employee_name']?.errors">
+          Name is required
+      </span>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Designation</label>
+      <input type="text" class="form-control" required formControlName="employee_designation" id="exampleFormControlInput1" placeholder="enter designation">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Salary</label>
+      <input type="text" class="form-control" numberOnly required formControlName="employee_salary" id="exampleFormControlInput1" placeholder="enter salary">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Date of Birth</label>
+      <p-calendar formControlName="dob" class="d-block"></p-calendar>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Bio</label>
+      <textarea class="form-control" formControlName="bio" id="exampleFormControlTextarea1" rows="3" placeholder="enter bio"></textarea>
+    </div>
+    <div class="button-container mt-4">
+      <button type="button" class="btn btn-primary mr-2" (click)="onSubmit()">Submit</button>
+      <button type="button" class="btn btn-secondary" (click)="reset()">reset</button>
+    </div>
+  </form>
+</div>

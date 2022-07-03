@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <h2>{{title}}</h2>
+    <p-tabView [(activeIndex)]="activeIndex" (onChange)="handleChange($event)">
+      <p-tabPanel header="Add">
+        <app-add-employee></app-add-employee>
+      </p-tabPanel>
+      <p-tabPanel header="Edit">
+        <app-edit-employee (onUpdateEvent)="showViewList($event)"></app-edit-employee>
+      </p-tabPanel>
+      <p-tabPanel header="View">
+        <app-view-employee (onEditEvent)="showEditForm($event)"></app-view-employee>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
